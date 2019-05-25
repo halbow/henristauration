@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Menu } from '../menu';
 import { MENUS } from '../menu-mock';
 import { OFFERS } from '../offer-mock';
@@ -9,9 +9,9 @@ import { OFFERS } from '../offer-mock';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  @Input() currentMenu: Menu;
   menus = MENUS;
   offers = OFFERS;
-  currentMenu: Menu;
   constructor() { }
 
   ngOnInit() {

@@ -57,8 +57,8 @@ export const OFFERS: Offer[] = [
         name: "Formule 1",
         price: 10.99,
         type: "porchetta",
-        smallPicture: "../assets/images/formules/pd-f3-small.jpg",
-        largePicture: "../assets/images/formules/pd-f3.jpg",
+        smallPicture: "../assets/images/formules/pork-small.jpg",
+        largePicture: "../assets/images/formules/pork.jpg",
         description: "1 Pains au chocolat + 1 croissant + jus/café + fruits"
     },
     /* bbq */

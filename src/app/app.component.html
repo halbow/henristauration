@@ -3,8 +3,8 @@
 <body>
   <app-header [currentHeader]="currentHeader" [headers]="headers" (headerChange)="onHeaderChange($event)">
   </app-header>
-  <app-home *ngIf="currentHeader.name === 'home'"></app-home>
-  <app-menu *ngIf="currentHeader.name === 'menu'"></app-menu>
+  <app-home *ngIf="currentHeader.name === 'home'" (showMenu)="showMenu($event)"></app-home>
+  <app-menu *ngIf="currentHeader.name === 'menu'" [currentMenu]="currentMenu"></app-menu>
   <app-location *ngIf="currentHeader.name === 'location'"></app-location>
   <app-contact *ngIf="currentHeader.name === 'contact'"></app-contact>
   <app-about *ngIf="currentHeader.name === 'about'"></app-about>
