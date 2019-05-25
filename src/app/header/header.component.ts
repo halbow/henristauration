@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Page } from "../page";
+import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
+import { Header } from "../header";
 
 @Component({
   selector: 'app-header',
@@ -7,24 +7,16 @@ import { Page } from "../page";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  pages: Page[] = [
-    { name: "home", friendlyName: "Home" },
-    { name: "menu", friendlyName: "Menu" },
-    { name: "location", friendlyName: "Location" },
-    { name: "contact", friendlyName: "Contact" },
-    { name: "about", friendlyName: "A propos" },
-  ]
-
-  currentPage: Page;
+  @Input() currentHeader: Header;
+  @Input() headers: any;
+  @Output() headerChange = new EventEmitter<Header>();
 
   constructor() { }
 
   ngOnInit() {
-    this.currentPage = this.currentPage || this.pages[0];
   }
 
-  onSelect(currentPage: Page): void {
-    this.currentPage = currentPage;
+  onSelect(currentHeader: Header): void {
+    this.headerChange.emit(currentHeader);
   }
 }

@@ -9,15 +9,10 @@
         <nav id="bt-menu" class="bt-menu bt-menu-open">
 
           <ul class="header">
-            <li *ngFor="let page of pages" id={{page.name}} class="bt-icon" [class.current]="page === currentPage"
-              (click)="onSelect(page)">
-              {{page.friendlyName}}
+            <li *ngFor="let header of headers" id={{header.name}} class="bt-icon"
+              [class.current]="header === currentHeader" (click)="onSelect(header)">
+              {{header.friendlyName}}
             </li>
-            <!--<li id="index" class="bt-icon "><a href="index.html">Home</a></li>
-            <li id="menu" class="bt-icon"><a href="menu.html">Menu</a></li>
-            <li id="location" class="bt-icon"><a href="location.html">Location</a></li>
-            <li id="contacts" class="bt-icon"><a href="contacts.html">Contact</a></li>
-            <li id="about" class="bt-icon"><a href="about.html">À propos</a></li>-->
           </ul>
         </nav>
         <div class="clear"></div>
