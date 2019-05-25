@@ -10,6 +10,8 @@ import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { MenuHeaderComponent } from './menu-header/menu-header.component';
+import { MenuContentComponent } from './menu-content/menu-content.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FooterComponent } from './footer/footer.component';
     MenuComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MenuHeaderComponent,
+    MenuContentComponent
   ],
   imports: [
     BrowserModule,

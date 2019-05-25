@@ -1,0 +1,12 @@
+<div class="tabs tb gallery">
+  <div class="div-nav  ">
+    <div class="grid_12">
+      <ul id="menuTab" class="nav">
+        <li *ngFor="let menu of menus" id={{menu.name}}_ [class.selected]="menu === currentMenu"
+          (click)="onSelect(menu)">
+          {{menu.friendlyName}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

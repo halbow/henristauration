@@ -1,0 +1,10 @@
+<div id="offer.type" class="tab-content gallery1" *ngIf="offer.type === currentMenu.name">
+  <div class="grid_3">
+    <a href="{{offer.largePicture}}" class="gal">
+      <img src="{{offer.smallPicture}}" alt=""><span></span></a>
+    <div class="col2">
+      <span class="col3">
+        <a href="#">{{offer.name}}</a>
+      </span> € {{offer.price}}</div>
+  </div>
+</div>
