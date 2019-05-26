@@ -1,0 +1,100 @@
+/****Map***/
+
+.map {}
+
+.map figure {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 43px;
+}
+
+.map figure iframe {
+    width: 100%;
+    height: 325px;
+    max-width: 100%;
+}
+
+.map address {
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+address dt {
+    margin-bottom: 20px;
+}
+
+address dd span {
+    min-width: 85px;
+    display: inline-block;
+    text-align: left;
+}
+
+#map {
+    width: 100%;
+    margin-top: 45px;
+    height: 350px;
+}
+
+.contact h3.head3 {
+    padding-top: 58px;
+    margin-bottom: 44px;
+}
+
+a.col2:hover {
+    color: #000;
+}
+
+#form input {
+    width: 100%;
+    height: 29px;
+    float: left;
+    background: #fbfbfb;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: #5f5e4e;
+    font: 14px/18px Arial, Helvetica, sans-serif;
+    border: 1px solid #f6f7ea;
+    padding: 11px 12px 12px;
+    margin-bottom: 15px;
+}
+
+#form textarea {
+    width: 100%;
+    height: 237px;
+    position: relative;
+    resize: none;
+    overflow: hidden;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    float: left;
+    margin: 0;
+    color: #5f5e4e;
+    font: 14px/18px Arial, Helvetica, sans-serif;
+    border: 1px solid #f6f7ea;
+    background: #fbfbfb;
+    padding: 11px 12px 12px;
+    margin-bottom: 15px;
+}
+
+.button {
+    background-color: #85846d;
+    border: none;
+    color: white;
+    padding: 13px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button:hover {
+    cursor: pointer;
+}

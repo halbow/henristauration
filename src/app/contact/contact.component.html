@@ -1,3 +1,46 @@
-<p>
-  contact works!
-</p>
+<div class="content contact">
+  <div class="container_12 put_right">
+    <div id="map">
+      <iframe width="940" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=4.168488085269929%2C50.40676536625253%2C4.172350466251374%2C50.40798761462624&amp;layer=mapnik&amp;marker=50.40737649438005%2C4.170419275760651"
+        style="border: 1px solid black">
+      </iframe>
+      <br>
+    </div>
+    <div class="grid_4">
+      <h3 class="head3">Adresse</h3>
+      <div class="map">
+        <address>
+          <dl>
+            <dt>Henristauration<br>
+              Rue de Merbes 87<br>
+              7130 Binche
+            </dt>
+            <dd><span>Telephone:</span>
+              <a href="tel:+32494051186">0494/051.186</a></dd>
+            <dd>E-mail:
+              <a href="mailto:info@henristauration.be?Subject=Information" target="_top"
+                class="col2">info@henristauration.be</a>
+            </dd>
+          </dl>
+        </address>
+      </div>
+    </div>
+    <div class="grid_8">
+      <h3 class="head3">Contactez-Nous!</h3>
+      <form (ngSubmit)="onSubmit()" id="form">
+        <div class="field">
+          <input type="text" name="name" class="input" placeholder="Your Name" size="35">
+        </div>
+        <div class="field">
+          <input type="email" name="email" class="input" placeholder="Your Email">
+        </div>
+        <div class="field">
+          <textarea class="textarea" name="message" placeholder="What's on your mind?"
+            data-constraints="@Required @Length(min=20,max=999999)"></textarea>
+        </div>
+        <button class="button is-danger is-large" (click)="onSubmit()">Envoyer</button>
+      </form>
+    </div>
+  </div>
+</div>
