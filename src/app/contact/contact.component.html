@@ -30,16 +30,28 @@
       <h3 class="head3">Contactez-Nous!</h3>
       <form (ngSubmit)="onSubmit()" id="form">
         <div class="field">
-          <input type="text" name="name" class="input" placeholder="Your Name" size="35">
+          <input type="text" name="name" class="input" placeholder="Nom" size="35" [(ngModel)]="name" required
+            minlength="2" #nameInput="ngModel">
+          <div class="help is-error" *ngIf="nameInput.invalid && nameInput.dirty">
+            Votre nom est obligatoire et doit être au moins 2 caractères.
+          </div>
         </div>
         <div class="field">
-          <input type="email" name="email" class="input" placeholder="Your Email">
+          <input type="email" name="email" class="input" placeholder="Your Email" [(ngModel)]="email" required email
+            #emailInput="ngModel">
+          <div class="help is-error" *ngIf="emailInput.invalid && emailInput.dirty">
+            Invalide email.
+          </div>
         </div>
         <div class="field">
           <textarea class="textarea" name="message" placeholder="What's on your mind?"
-            data-constraints="@Required @Length(min=20,max=999999)"></textarea>
+            data-constraints="@Required @Length(min=20,max=999999)" [(ngModel)]="message" required minlength="3"
+            #messageInput="ngModel"></textarea>
+          <div class="help is-error" *ngIf="messageInput.invalid && messageInput.dirty">
+            Le message est obligatoire.
+          </div>
         </div>
-        <button class="button is-danger is-large" (click)="onSubmit()">Envoyer</button>
+        <button type="submit" class="button is-danger is-large">Envoyer</button>
       </form>
     </div>
   </div>
