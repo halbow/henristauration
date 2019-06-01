@@ -2,10 +2,13 @@
   <a id="{{group}}" class="block1" *ngFor="let group of menusGroup">
     <img src="../../assets/images/{{group}}.jpg" alt="">
     <ng-container *ngFor="let menu of menus">
-      <span (click)=onSelect(menu) class="price {{menu.position}}" *ngIf="menu.group === group">
+      <span routerLink="/menu/{{menu.name}}" (click)=onSelect(menu) class=" price {{menu.position}}"
+        *ngIf="menu.group === group">
         <br>
-        <span>{{menu.friendlyName}}</span><strong></strong>
-
+        <nav>
+          <a>{{menu.friendlyName}}</a>
+        </nav>
+        <strong></strong>
       </span>
     </ng-container>
   </a>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 import { HEADERS } from "./header-mock";
 import { MENUS } from "./menu-mock";
 import { Header } from "./header";
@@ -17,13 +18,13 @@ export class AppComponent {
   currentHeader: Header;
   currentMenu: Menu;
 
-  ngOnInit() {
-    this.currentHeader = this.currentHeader || this.headers[0];
-    this.currentMenu = this.currentMenu || this.menus[0];
-  }
+  constructor(private location: Location) { }
 
-  onHeaderChange(currentHeader: Header) {
-    this.currentHeader = currentHeader;
+  ngOnInit() {
+    this.currentMenu = this.currentMenu || this.menuFromUrl(this.location.path());
+  }
+  menuFromUrl(url: string) {
+    return this.menus.filter(menu => menu.name === url.substring(url.lastIndexOf('/') + 1))[0];
   }
 
   showMenu(menu: Menu) {
