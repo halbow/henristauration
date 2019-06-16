@@ -10,7 +10,7 @@
 
           <ul class="header">
             <li *ngFor="let header of headers" id={{header.name}} class="bt-icon"
-              [class.current]="header === currentHeader" (click)="onSelect(header)">
+              [class.current]="header === currentHeader">
               <nav>
                 <a routerLink="/{{header.name}}"> {{header.friendlyName}}
                 </a>

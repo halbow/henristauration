@@ -3118,6 +3118,10 @@ a.col1:hover, .col1>a:hover {
 	border-radius: 500px;
 }
 
+.div-tabs a.gal img :hover {
+	cursor: pointer;
+}
+
 .post {
 	overflow: hidden;
 }
