@@ -15,6 +15,8 @@ import { FooterComponent } from './footer/footer.component';
 import { MenuHeaderComponent } from './menu-header/menu-header.component';
 import { MenuContentComponent } from './menu-content/menu-content.component';
 
+import { LightboxModule } from 'ngx-lightbox';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,8 @@ import { MenuContentComponent } from './menu-content/menu-content.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
