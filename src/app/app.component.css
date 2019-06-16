@@ -17,6 +17,11 @@
   Note: IE6 works fine without this fix.
 */
 
+body.modal-open {
+	overflow: hidden;
+	position: fixed;
+}
+
 body {
 	min-width: 960px;
 }

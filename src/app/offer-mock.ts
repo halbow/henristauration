@@ -50,7 +50,7 @@ export const OFFERS: Offer[] = [
         type: "diner",
         smallPicture: "../assets/images/formules/pd-f3-small.jpg",
         largePicture: "../assets/images/formules/pd-f3.jpg",
-        description: "1 Pains au chocolat + 1 croissant + jus/café + fruits"
+        description: "1 Pains au chocolat \n 1 croissant + jus/café + fruits"
     },
     /* porchetta */
     {

@@ -1,10 +1,17 @@
 <div id="offer.type" class="tab-content gallery1" *ngIf="offer.type === currentMenu.name">
   <div class="grid_3">
-    <a href="{{offer.largePicture}}" class="gal">
-      <img src="{{offer.smallPicture}}" alt=""><span></span></a>
+    <a class="gal">
+      <img src="{{offer.smallPicture}}" alt="" (click)=onDisplay()>
+    </a>
+    <div id="myModal" class="modal" [ngStyle]="{'display': display}">
+      <span class="close" (click)=onClose()>&times;</span>
+      <img src="{{offer.largePicture}}" class="modal-content" id="img01">
+      <div id="caption"> {{offer.description}}</div>
+    </div>
     <div class="col2">
       <span class="col3">
         <a href="#">{{offer.name}}</a>
-      </span> € {{offer.price}}</div>
+      </span> € {{offer.price}}
+    </div>
   </div>
 </div>

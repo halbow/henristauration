@@ -10,9 +10,18 @@ import { Offer } from '../offer';
 export class MenuContentComponent implements OnInit {
   @Input() currentMenu: Menu;
   @Input() offer: Offer;
+  public display: string;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onDisplay() {
+    this.display = "block";
+  }
+
+  onClose() {
+    this.display = "none";
   }
 
 }

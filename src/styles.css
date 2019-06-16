@@ -661,23 +661,6 @@ a.gal {
 	position: relative;
 }
 
-a.gal span {
-	transition: 0.5s ease;
-	-o-transition: 0.5s ease;
-	-webkit-transition: 0.5s ease;
-	display: block;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	background: url(assets/images/magnify.png) -100% center no-repeat;
-}
-
-a.gal:hover span {
-	background-position: center center;
-}
-
 /****Map***/
 
 .map {}
