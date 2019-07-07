@@ -17,7 +17,7 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(content) {
+  onSubmit() {
     const allInfo = `My name is ${this.name}. My email is ${this.email}. My message is ${this.message}`;
     this.mailService.send(this.name, this.email, this.message).subscribe(
       res => {
