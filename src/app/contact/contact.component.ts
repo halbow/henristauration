@@ -21,7 +21,6 @@ export class ContactComponent implements OnInit {
     const allInfo = `My name is ${this.name}. My email is ${this.email}. My message is ${this.message}`;
     this.mailService.send(this.name, this.email, this.message).subscribe(
       res => {
-        console.log(res['data']);
       }
     );
   }
