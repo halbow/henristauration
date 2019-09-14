@@ -1,6 +1,6 @@
 <div class="content">
   <a id="{{group}}" class="block1" *ngFor="let group of menusGroup">
-    <img src="../../assets/images/{{group}}.jpg" alt="">
+    <img src="./assets/images/{{group}}.jpg" alt="">
     <ng-container *ngFor="let menu of menus">
       <span routerLink="/menu/{{menu.name}}" (click)=onSelect(menu) class=" price {{menu.position}}"
         *ngIf="menu.group === group">
