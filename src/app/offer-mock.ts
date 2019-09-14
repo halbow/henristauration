@@ -7,8 +7,8 @@ export const OFFERS: Offer[] = [
         name: "Formule petit-déjeuner 1",
         price: 333.99,
         type: "breakfast",
-        thumb: ASSETS.concat("formules / pd - f1 - small.jpg"),
-        src: ASSETS.concat("formules / pd - f1.jpg"),
+        thumb: ASSETS.concat("formules/pd-f1-small.jpg"),
+        src: ASSETS.concat("formules/pd-f1.jpg"),
         caption: "1 Pains au chocolat + jus/café"
     },
     {
