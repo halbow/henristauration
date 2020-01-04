@@ -1,5 +1,5 @@
 <div class="content">
-  <div class="container_12">
+  <div class="container_12" *ngIf="currentMenu; else elseBlock">
     <div class="grid_12">
       <h3 class="head2">Nos Menus</h3>
     </div>
@@ -10,4 +10,7 @@
       </app-menu-content>
     </div>
   </div>
+  <ng-template #elseBlock>
+    No Menu For the Moment
+  </ng-template>
 </div>

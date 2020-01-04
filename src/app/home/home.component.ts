@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { MENUS } from "../menu-mock";
 import { Menu } from "../menu";
+import { MenuService } from "../menu.service";
 
 @Component({
   selector: 'app-home',
@@ -10,12 +10,15 @@ import { Menu } from "../menu";
 export class HomeComponent implements OnInit {
   @Output() showMenu = new EventEmitter<Menu>();
 
-  menus = MENUS;
+  menus = [];
   public menusGroup = ["breakfast", "diner", "menu"];
 
-  constructor() { }
+  constructor(private menuService: MenuService) { }
 
   ngOnInit() {
+    this.menuService.getMenus().subscribe(res => {
+      this.menus = res["menus"];
+    });
   }
 
 

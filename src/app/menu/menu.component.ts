@@ -2,8 +2,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Component, OnInit, Input } from '@angular/core';
 import { Menu } from '../menu';
-import { MENUS } from '../menu-mock';
-import { OFFERS } from '../offer-mock';
+import { MenuService } from "../menu.service";
+import { OfferService } from "../offer.service";
 
 @Component({
   selector: 'app-menu',
@@ -11,24 +11,32 @@ import { OFFERS } from '../offer-mock';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  @Input() currentMenu: Menu;
-  menus = MENUS;
-  offers = OFFERS;
+  public currentMenu: Menu;
+  public menus: any;
+  public offers: any;
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location
+    private menuService: MenuService,
+    private offerService: OfferService,
   ) {
-    this.currentMenu = this.menus[0];
+    this.menus = [];
+    this.offers = [];
   }
 
   ngOnInit() {
-    this.getMenu();
+    this.offerService.getOffers().subscribe(res => {
+      this.offers = res;
+    });
+    this.menuService.getMenus().subscribe(res => {
+      this.menus = res;
+      this.getMenu();
+    });
   }
 
   getMenu(): void {
     const name = this.route.snapshot.paramMap.get('name');
-    this.currentMenu = this.menus.filter(menu => menu.name === name)[0] || this.currentMenu;
+    this.currentMenu = this.menus.filter(menu => menu.name === name)[0] || this.menus[0];
   }
   onMenuChange(currentMenu: Menu) {
     this.currentMenu = currentMenu;

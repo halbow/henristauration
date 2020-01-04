@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Menu } from '../menu';
 import { Offer } from '../offer';
 import { Lightbox } from 'ngx-lightbox';
-import { OFFERS } from '../offer-mock';
+import { OfferService } from "../offer.service";
 
 @Component({
   selector: 'app-menu-content',
@@ -13,15 +13,17 @@ export class MenuContentComponent implements OnInit {
   @Input() currentMenu: Menu;
   @Input() offer: Offer;
   public display: string;
-  public offers = OFFERS;
-  constructor(private _lightbox: Lightbox) { }
+  public offers = [];
+  constructor(private _lightbox: Lightbox, private offerService: OfferService) { }
 
   ngOnInit() {
+    this.offerService.getOffers().subscribe(res => {
+      this.offers = res["offers"];
+    });
   }
 
   open(offer: Offer): void {
     // open lightbox
-    console.log('helloe)');
     this._lightbox.open(this.offers, this.offers.indexOf(offer));
   }
 

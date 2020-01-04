@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Location } from '@angular/common';
 import { HEADERS } from "./header-mock";
-import { MENUS } from "./menu-mock";
 import { Header } from "./header";
 import { Menu } from './menu';
+import { MenuService } from "./menu.service";
+import { OfferService } from "./offer.service";
 
 @Component({
   selector: 'app-root',
@@ -14,21 +14,33 @@ export class AppComponent {
   title = 'henristauration';
 
   headers = HEADERS;
-  menus = MENUS;
+  public menus: any = [];
+  public offers: any = [];
   currentHeader: Header;
-  currentMenu: Menu;
+  /*currentMenu: Menu;*/
 
-  constructor(private location: Location) { }
+  constructor(
+    private menuService: MenuService,
+    private offerService: OfferService,
+  ) { }
 
   ngOnInit() {
-    this.currentMenu = this.currentMenu || this.menuFromUrl(this.location.path());
+    /*this.currentMenu = this.currentMenu || this.menuFromUrl(this.location.path());
+    console.log(this.currentMenu);
+    */
+    this.menuService.getMenus().subscribe(res => { this.menus = res }
+    );
+    this.offerService.getOffers().subscribe(res => { this.offers = res }
+    );
   }
   menuFromUrl(url: string) {
     return this.menus.filter(menu => menu.name === url.substring(url.lastIndexOf('/') + 1))[0];
   }
 
+  /*
   showMenu(menu: Menu) {
     this.currentHeader = this.headers.filter(header => header.name === "menu")[0];
     this.currentMenu = menu;
   }
+  */
 }
