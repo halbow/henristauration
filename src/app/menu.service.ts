@@ -17,7 +17,7 @@ export class MenuService {
 
 
   public getMenus(): Observable<Object> {
-    if (this.menus.length != 0) {
+    if (this.menus.length !== 0) {
       return of(this.menus);
     }
     return this.http.get<Menu>(this.menuUrl).pipe(

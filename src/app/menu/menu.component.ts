@@ -1,5 +1,4 @@
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
 import { Component, OnInit, Input } from '@angular/core';
 import { Menu } from '../menu';
 import { MenuService } from "../menu.service";

@@ -13,12 +13,12 @@ export class MenuContentComponent implements OnInit {
   @Input() currentMenu: Menu;
   @Input() offer: Offer;
   public display: string;
-  public offers = [];
+  public offers: any = [];
   constructor(private _lightbox: Lightbox, private offerService: OfferService) { }
 
   ngOnInit() {
     this.offerService.getOffers().subscribe(res => {
-      this.offers = res["offers"];
+      this.offers = res;
     });
   }
 

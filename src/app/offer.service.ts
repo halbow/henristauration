@@ -15,7 +15,7 @@ export class OfferService {
     private http: HttpClient
   ) { }
   public getOffers(): Observable<Object> {
-    if (this.offers.length != 0) {
+    if (this.offers.length !== 0) {
       return of(this.offers);
     }
     return this.http.get<Offer>(this.OfferUrl).pipe(
