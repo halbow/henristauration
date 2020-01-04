@@ -24,7 +24,7 @@ export const OFFERS: Offer[] = [
         price: 4.99,
         type: "breakfast",
         thumb: ASSETS.concat("formules/pd-f3-small.jpg"),
-        src: ASSETS.concat("ormules/pd-f3.jpg"),
+        src: ASSETS.concat("formules/pd-f3.jpg"),
         caption: "1 Pains au chocolat + 1 croissant + jus/café + fruits"
     },
     /* wdiner */
@@ -32,7 +32,7 @@ export const OFFERS: Offer[] = [
         name: "Formule 1",
         price: 7.99,
         type: "wdiner",
-        thumb: ASSETS.concat("./assets/images/formules/pd-f3-small.jpg"),
+        thumb: ASSETS.concat("formules/pd-f3-small.jpg"),
         src: ASSETS.concat("formules/pd-f3.jpg"),
         caption: "1 Pains au chocolat + 1 croissant + jus/café + fruits"
     },
