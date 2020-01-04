@@ -10,14 +10,14 @@ import { MenuService } from "../menu.service";
 export class HomeComponent implements OnInit {
   @Output() showMenu = new EventEmitter<Menu>();
 
-  menus = [];
+  public menus: any = [];
   public menusGroup = ["breakfast", "diner", "menu"];
 
   constructor(private menuService: MenuService) { }
 
   ngOnInit() {
     this.menuService.getMenus().subscribe(res => {
-      this.menus = res["menus"];
+      this.menus = res;
     });
   }
 

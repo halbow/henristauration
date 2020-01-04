@@ -14,6 +14,8 @@ export class MenuHeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.menus);
+    console.log(this.currentMenu);
   }
 
   onSelect(currentMenu: Menu): void {
