@@ -1,5 +1,5 @@
 import { Menu } from "./menu";
-export const MENUS: Menu[] = [
+export const MENUS_OLD: Menu[] = [
     {
         name: "breakfast",
         friendlyName: "Petit-Déjeuner",

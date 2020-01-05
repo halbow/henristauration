@@ -1,7 +1,7 @@
 import { Offer } from "./offer";
 
 const ASSETS = "./assets/images/";
-export const OFFERS: Offer[] = [
+export const OFFERS_OLD: Offer[] = [
     /* breakfast */
     {
         name: "Formule petit-déjeuner 1",
