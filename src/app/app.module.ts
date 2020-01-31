@@ -16,6 +16,7 @@ import { MenuHeaderComponent } from './menu-header/menu-header.component';
 import { MenuContentComponent } from './menu-content/menu-content.component';
 
 import { LightboxModule } from 'ngx-lightbox';
+import { CoursComponent } from './cours/cours.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LightboxModule } from 'ngx-lightbox';
     HeaderComponent,
     FooterComponent,
     MenuHeaderComponent,
-    MenuContentComponent
+    MenuContentComponent,
+    CoursComponent
   ],
   imports: [
     BrowserModule,
