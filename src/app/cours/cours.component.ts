@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CLASSES_COURSES } from "../class-mock";
 import { ClassService } from "../class.service";
 
 @Component({
