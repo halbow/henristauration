@@ -17,6 +17,8 @@ import { MenuContentComponent } from './menu-content/menu-content.component';
 
 import { LightboxModule } from 'ngx-lightbox';
 import { CoursComponent } from './cours/cours.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { CoursComponent } from './cours/cours.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    LightboxModule
+    LightboxModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

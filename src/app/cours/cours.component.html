@@ -1,18 +1,26 @@
 <div class="content">
     <div class="container_12">
-        <div class="grid_3 prefix_1">
+        <mat-tab-group>
             <div *ngFor="let class of classes_courses">
-                <div *ngIf="class.courses.length">
-                    <h3 class="head3">Classe {{class.name}}</h3>
-                    <ul class="list">
-                        <div *ngFor="let course of class.courses">
-                            <li>
-                                <a href="{{url}}/api/course/{{course.name}}">{{course.name}}</a>
-                            </li>
-                        </div>
-                    </ul>
-                </div>
+                <mat-tab label="Classe {{class.name}}">
+                    <div class="grid_3 prefix_1">
+                        <ul class="list">
+                            <br>
+                            <div *ngFor="let course of class.courses">
+                                <li>
+                                    <a href="{{url}}/api/course/{{course.name}}">{{course.name}}</a>
+                                </li>
+                            </div>
+                            <div *ngIf="class.courses.length">
+
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                        </ul>
+                    </div>
+                </mat-tab>
             </div>
-        </div>
+        </mat-tab-group>
     </div>
 </div>
